@@ -1,0 +1,420 @@
+{
+  "Movie": {
+    "icon": "🎬",
+    "items": [
+      [
+        "Roar",
+        "20%",
+        "—",
+        "Movie spends"
+      ]
+    ]
+  },
+  "UPI": {
+    "icon": "📱",
+    "items": [
+      [
+        "Slice",
+        "1%",
+        "No stated cap",
+        "Any amount"
+      ],
+      [
+        "Uni Goldx",
+        "1%",
+        "—",
+        "Above ₹100"
+      ]
+    ]
+  },
+  "Grocery": {
+    "icon": "🛒",
+    "items": [
+      [
+        "Kotak 811",
+        "5%",
+        "₹10,000",
+        "₹2,000 per transaction; online/offline"
+      ],
+      [
+        "IDFC Power+",
+        "5%",
+        "₹2,000/month cap",
+        "Multiple of ₹150; online/offline"
+      ],
+      [
+        "SBI Tata Neu Plus",
+        "7% → 5%",
+        "7% up to ₹50,000",
+        "Any amount; BigBasket only. 5% after ₹50,000"
+      ],
+      [
+        "Amazon ICICI",
+        "5%",
+        "No cap",
+        "Amazon Fresh only"
+      ]
+    ]
+  },
+  "Fuel": {
+    "icon": "⛽",
+    "items": [
+      [
+        "IDFC Power+",
+        "6.5% → 5%",
+        "6.5% up to ₹10,000; then 5% up to ₹12,000",
+        "HP fuel only; remaining ₹2,000 gets 5%"
+      ],
+      [
+        "Kotak 811",
+        "4% / 3%",
+        "₹10,000",
+        "Maximise website: 4% for BPCL (min ₹100), with partial payment allowed; 3% for Indian Oil (min ₹500), ₹2,000 per transaction and one-time use."
+      ],
+      [
+        "Slice / Uni Goldx",
+        "2.98%",
+        "—",
+        "Dealzy website: Shell at 2.98% reward using UPI only; multi-use voucher, minimum ₹100."
+      ]
+    ]
+  },
+  "Amazon": {
+    "icon": "📦",
+    "items": [
+      [
+        "Jupiter Edge+",
+        "10%",
+        "Up to ₹6,000",
+        "₹2,000 each (as noted)"
+      ],
+      [
+        "Amazon ICICI",
+        "5%",
+        "No limit",
+        "Amazon spends"
+      ],
+      [
+        "SBI SimplyCLICK",
+        "2.5%",
+        "₹60,000 cap",
+        "Only for shopping"
+      ]
+    ]
+  },
+  "Train": {
+    "icon": "🚆",
+    "items": [
+      [
+        "Kotak 811",
+        "5%",
+        "₹10,000",
+        "₹2,000 per transaction"
+      ],
+      [
+        "AU ixigo",
+        "2.5%",
+        "No limit",
+        "ixigo only; multiple of ₹200; IRCTC fee waiver"
+      ],
+      [
+        "Amazon ICICI",
+        "2%",
+        "No limit",
+        "Only when booked through Amazon"
+      ]
+    ]
+  },
+  "Bus": {
+    "icon": "🚌",
+    "items": [
+      [
+        "Kotak 811",
+        "5%",
+        "₹10,000",
+        "₹2,000 per transaction"
+      ],
+      [
+        "AU ixigo",
+        "2.5%",
+        "No limit",
+        "ixigo only; multiple of ₹200"
+      ],
+      [
+        "Amazon ICICI",
+        "5% / 2%",
+        "No limit",
+        "5% when booked on Amazon; 2% outside Amazon only when Amazon Pay is selected as the payment option"
+      ]
+    ]
+  },
+  "Flight": {
+    "icon": "✈️",
+    "items": [
+      [
+        "AU ixigo",
+        "10% → 2.5%",
+        "10% up to ₹30,000 once/month; later 2.5%, reward cap as noted ₹4L",
+        "Every ₹200 multiple"
+      ],
+      [
+        "Amazon ICICI",
+        "5%",
+        "No limit",
+        "When flight is booked via Amazon"
+      ],
+      [
+        "Jupiter Edge+",
+        "5%",
+        "₹20,000/month cap",
+        "Only through Jupiter app"
+      ]
+    ]
+  },
+  "Water / Electricity": {
+    "icon": "⚡",
+    "items": [
+      [
+        "IDFC Power+",
+        "5%",
+        "₹2,000 cap",
+        "Multiple of ₹150"
+      ],
+      [
+        "Kotak 811",
+        "5%",
+        "₹10,000",
+        "₹2,000 per transaction"
+      ],
+      [
+        "Amazon ICICI",
+        "2%",
+        "No limit",
+        "Only on Amazon"
+      ]
+    ]
+  },
+  "Other Utility": {
+    "icon": "🧾",
+    "items": [
+      [
+        "IDFC Power+",
+        "5%",
+        "₹2,000 cap",
+        "Multiple of ₹150"
+      ],
+      [
+        "Kotak 811",
+        "5%",
+        "₹10,000",
+        "₹2,000 per transaction"
+      ],
+      [
+        "Amazon ICICI",
+        "2%",
+        "No limit",
+        "Anywhere"
+      ]
+    ]
+  },
+  "Government Payments": {
+    "icon": "🏛️",
+    "items": [
+      [
+        "Amazon ICICI",
+        "1%",
+        "No limit",
+        "Anywhere"
+      ]
+    ]
+  },
+  "Insurance": {
+    "icon": "🛡️",
+    "items": [
+      [
+        "Amazon ICICI",
+        "1%",
+        "No limit",
+        "Use other than Amazon; don't use on Amazon"
+      ],
+      [
+        "SBI Tata Neu Plus",
+        "1% / 2%",
+        "1% up to ₹2,00,000/month; 2% up to ₹1,00,000/month",
+        "1% for regular payment; 2% when paid through the Tata Neu app"
+      ]
+    ]
+  },
+  "Education Fee": {
+    "icon": "🎓",
+    "items": [
+      [
+        "Amazon ICICI",
+        "1%",
+        "No limit",
+        "Anywhere"
+      ]
+    ]
+  },
+  "General Spends": {
+    "icon": "💳",
+    "items": [
+      [
+        "Amazon ICICI",
+        "1%",
+        "No limit",
+        "Anywhere"
+      ],
+      [
+        "RBL Duet",
+        "1%",
+        "No limit",
+        "Anywhere"
+      ],
+      [
+        "SBI Tata Neu Plus",
+        "1%",
+        "No limit",
+        "Anywhere"
+      ]
+    ]
+  },
+  "Dining": {
+    "icon": "🍽️",
+    "items": [
+      [
+        "Kotak 811",
+        "5%",
+        "₹10,000",
+        "₹2,000 per transaction"
+      ],
+      [
+        "Amazon Pay",
+        "1%",
+        "No limit",
+        "Anywhere"
+      ],
+      [
+        "Slice",
+        "1%",
+        "No limit",
+        "Anywhere"
+      ],
+      [
+        "Uni Goldx",
+        "1%",
+        "No limit",
+        "Above ₹100"
+      ],
+      [
+        "RBL Duet",
+        "1%",
+        "No limit",
+        "Anywhere"
+      ]
+    ]
+  },
+  "Food Delivery": {
+    "icon": "🍔",
+    "items": [
+      [
+        "SBI SimplyCLICK",
+        "2.5% / 1.25%",
+        "₹1,00,000 / ₹2,00,000",
+        "2.5% on Swiggy and Domino's, capped at ₹1,00,000; 1.25% on Zomato and Eat Club, capped at ₹2,00,000. Both require transactions in multiples of ₹100."
+      ],
+      [
+        "Kotak 811",
+        "5%",
+        "₹10,000",
+        "₹2,000 per transaction"
+      ],
+      [
+        "Axis Neo",
+        "40% off",
+        "₹300",
+        "Only on Zomato; maximum 2 times per month"
+      ]
+    ]
+  },
+  "Forex Spends": {
+    "icon": "🌍",
+    "items": [
+      [
+        "AU ixigo",
+        "0% markup",
+        "—",
+        "Zero forex markup fee"
+      ],
+      [
+        "BoB Uni Goldx",
+        "0% markup",
+        "—",
+        "Zero forex markup fee"
+      ],
+      [
+        "DCB Niyo",
+        "0% markup",
+        "—",
+        "Zero forex markup fee"
+      ]
+    ]
+  },
+  "Airport Lounge": {
+    "icon": "🛋️",
+    "items": [
+      [
+        "AU ixigo",
+        "Domestic: 8 | International: 1",
+        "Domestic: 2 per quarter (as noted)",
+        "₹50,000 spend per quarter requirement"
+      ],
+      [
+        "SBI Tata Neu Plus",
+        "Domestic: 4",
+        "1 per quarter (as noted)",
+        "₹50,000 spend per quarter requirement"
+      ]
+    ]
+  },
+  "Railway Lounge": {
+    "icon": "🚉",
+    "items": [
+      [
+        "AU ixigo",
+        "2 per quarter",
+        "No spend requirement",
+        "Anywhere"
+      ],
+      [
+        "IDFC Millennia",
+        "4 per quarter",
+        "—",
+        "₹20,000 previous-month spend for current-month eligibility"
+      ]
+    ]
+  },
+  "Festive Season": {
+    "icon": "🎉",
+    "items": [
+      [
+        "SBI SimplyCLICK",
+        "Special offers",
+        "Varies",
+        "Best used for festive promotions"
+      ],
+      [
+        "Yes FinBooster",
+        "Special offers",
+        "Varies",
+        "Best used for festive promotions"
+      ],
+      [
+        "Axis Neo",
+        "Special offers",
+        "Varies",
+        "Best used for festive promotions"
+      ]
+    ]
+  }
+}

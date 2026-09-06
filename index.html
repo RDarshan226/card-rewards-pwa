@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Card Rewards Navigator</title>
+<style>
+:root{
+  --bg:#070812; --panel:#101326; --panel2:#151936;
+  --cyan:#00f5ff; --pink:#ff3cac; --purple:#8b5cf6;
+  --lime:#a3ff12; --text:#edf7ff; --muted:#9aa8c5;
+}
+*{box-sizing:border-box}
+body{
+ margin:0; font-family:Inter,Segoe UI,Arial,sans-serif; color:var(--text);
+ background:radial-gradient(circle at 20% 0%,#18255b 0%,transparent 30%),
+            radial-gradient(circle at 100% 20%,#4b1248 0%,transparent 25%),var(--bg);
+ min-height:100vh;
+}
+header{text-align:center;padding:38px 20px 22px}
+h1{margin:0;font-size:clamp(2rem,5vw,3.6rem);letter-spacing:1px;
+ background:linear-gradient(90deg,var(--cyan),var(--pink),var(--lime));
+ -webkit-background-clip:text;background-clip:text;color:transparent}
+header p{color:var(--muted);margin:10px 0 0}
+.container{max-width:1250px;margin:auto;padding:0 18px 45px}
+.search-wrap{position:sticky;top:10px;z-index:10;margin:12px 0 24px}
+input{
+ width:100%;padding:16px 20px;border-radius:16px;border:1px solid #2d3766;
+ background:#0d1023eF;color:white;font-size:1rem;outline:none;
+ box-shadow:0 0 25px #00f5ff22;backdrop-filter:blur(10px)
+}
+input:focus{border-color:var(--cyan);box-shadow:0 0 20px #00f5ff55}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.category{
+ cursor:pointer;min-height:125px;padding:22px;border-radius:18px;
+ background:linear-gradient(145deg,#141a38,#0c0f22);
+ border:1px solid #29335d;position:relative;overflow:hidden;
+ transition:.25s transform,.25s box-shadow,.25s border;
+}
+.category:before{content:"";position:absolute;inset:-2px;background:linear-gradient(135deg,var(--cyan),transparent 35%,var(--pink));opacity:.35}
+.category>*{position:relative}
+.category:hover,.category.active{transform:translateY(-5px);border-color:var(--cyan);box-shadow:0 0 22px #00f5ff44,0 0 35px #ff3cac22}
+.icon{font-size:1.8rem}.category h3{margin:10px 0 4px}.category small{color:var(--muted)}
+.details{margin-top:26px;display:none;background:#0e1127e8;border:1px solid #34406f;border-radius:22px;padding:24px;box-shadow:0 0 35px #8b5cf633}
+.details.show{display:block;animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.details-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:18px}
+.details h2{margin:0;color:var(--cyan)}
+.close{cursor:pointer;background:#20284d;color:white;border:1px solid #56669e;border-radius:9px;padding:8px 12px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:15px}
+.card{background:linear-gradient(145deg,#171c3c,#0d1025);border:1px solid #303a69;border-radius:16px;padding:18px;transition:.2s}
+.card:hover{border-color:var(--pink);box-shadow:0 0 20px #ff3cac33}
+.card h3{margin:0 0 12px;color:#fff}
+.rate{display:inline-block;font-size:1.45rem;font-weight:800;color:var(--lime);text-shadow:0 0 10px #a3ff1266;margin-bottom:10px}
+.row{margin:8px 0;color:#c5cee5;font-size:.92rem}.label{color:var(--cyan);font-weight:700}
+.empty{padding:30px;text-align:center;color:var(--muted)}
+.footer{text-align:center;color:#6f7b9e;padding:25px}
+
+.modal{
+ display:none; position:fixed; inset:0; z-index:100;
+ background:rgba(3,5,16,.82); backdrop-filter:blur(10px);
+ padding:20px; overflow:auto;
+}
+.modal.show{display:flex;align-items:center;justify-content:center;animation:fade .2s ease}
+.modal-content{
+ width:min(1050px,100%); max-height:90vh; overflow:auto;
+ background:linear-gradient(145deg,#101632,#090b1d);
+ border:1px solid var(--cyan); border-radius:24px; padding:26px;
+ box-shadow:0 0 25px #00f5ff55,0 0 70px #ff3cac33;
+ animation:pop .25s ease;
+}
+@keyframes pop{from{opacity:0;transform:scale(.96) translateY(15px)}to{opacity:1;transform:none}}
+body.modal-open{overflow:hidden}
+
+@media(max-width:600px){header{padding-top:28px}.details{padding:17px}}
+</style>
+
+<meta name="theme-color" content="#070812">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
+</head>
+<body>
+<header>
+  <h1>⚡ Card Rewards Navigator</h1>
+  <p>Select a spending category to discover the best card, rewards, caps and conditions.</p>
+</header>
+
+<div class="container">
+ <div class="search-wrap"><input id="search" placeholder="🔍 Search categories or cards..." oninput="filterCategories()"></div>
+ <div class="grid" id="grid"></div>
+ <div class="modal" id="modal" onclick="handleBackdrop(event)">
+   <section class="modal-content">
+     <div class="details-head"><h2 id="detailTitle"></h2><button class="close" onclick="closeDetails()">✕ Close</button></div>
+     <div class="cards" id="cards"></div>
+   </section>
+ </div>
+</div>
+<div class="footer">Interactive personal card rewards dashboard • Tap any category to explore</div>
+
+<script>
+let data = {};
+async function loadRewardsData() {
+  try {
+    const response = await fetch("./rewards-data.json", {cache: "no-store"});
+    if (!response.ok) throw new Error("Unable to load rewards data");
+    data = await response.json();
+    render();
+  } catch (error) {
+    document.getElementById("grid").innerHTML =
+      '<div class="empty">Unable to load reward data. Please check your connection and try again.</div>';
+    console.error(error);
+  }
+}
+
+function render(filter=""){
+ const grid=document.getElementById("grid"); grid.innerHTML="";
+ Object.entries(data).filter(([name,obj])=>{
+   const text=(name+" "+obj.items.flat().join(" ")).toLowerCase();
+   return text.includes(filter.toLowerCase());
+ }).forEach(([name,obj])=>{
+   const d=document.createElement("div");d.className="category";
+   d.dataset.name=name;
+   d.innerHTML=`<div class="icon">${obj.icon}</div><h3>${name}</h3><small>${obj.items.length} card option${obj.items.length>1?"s":""} • Click to view</small>`;
+   d.onclick=()=>showDetails(name,d);grid.appendChild(d);
+ });
+ if(!grid.children.length)grid.innerHTML='<div class="empty">No matching category or card found.</div>';
+}
+function showDetails(name,el){
+ document.querySelectorAll(".category").forEach(x=>x.classList.remove("active"));
+ el.classList.add("active");
+ const d=data[name];
+ document.getElementById("detailTitle").textContent=d.icon+" "+name;
+ document.getElementById("cards").innerHTML=d.items.map(i=>`<article class="card">
+ <h3>${i[0]}</h3><div class="rate">${i[1]}</div>
+ <div class="row"><span class="label">Cap:</span> ${i[2]}</div>
+ <div class="row"><span class="label">Conditions:</span> ${i[3]}</div>
+ </article>`).join("");
+ document.getElementById("modal").classList.add("show");
+ document.body.classList.add("modal-open");
+}
+function closeDetails(){
+ document.getElementById("modal").classList.remove("show");
+ document.body.classList.remove("modal-open");
+ document.querySelectorAll(".category").forEach(x=>x.classList.remove("active"));
+}
+function handleBackdrop(event){
+ if(event.target.id==="modal") closeDetails();
+}
+document.addEventListener("keydown", event=>{
+ if(event.key==="Escape") closeDetails();
+});
+function filterCategories(){render(document.getElementById("search").value)}
+loadRewardsData();
+</script>
+<script>
+if ("serviceWorker" in navigator) {
+ window.addEventListener("load", () => navigator.serviceWorker.register("./service-worker.js"));
+}
+</script></body>
+</html>
