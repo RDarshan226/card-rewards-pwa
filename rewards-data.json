@@ -426,6 +426,35 @@
         "Special offers",
         "Varies",
         "Best used for festive promotions"
+      ],
+      [
+        "HDFC MoneyBack+",
+        "Special offers",
+        "Varies",
+        "Best used for festive promotions"
+      ]
+    ]
+  },
+  "Vouchers": {
+    "icon": "🎁",
+    "items": [
+      [
+        "BoB Uni Goldx",
+        "Voucher offers",
+        "Varies",
+        "Eligible voucher offers; check the applicable offer terms"
+      ],
+      [
+        "HDFC MoneyBack+",
+        "Voucher offers",
+        "Varies",
+        "Eligible voucher offers; check the applicable offer terms"
+      ],
+      [
+        "Kotak Debit",
+        "Voucher offers",
+        "Varies",
+        "Eligible voucher offers; check the applicable offer terms"
       ]
     ]
   }
