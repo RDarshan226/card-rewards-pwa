@@ -1,160 +1,233 @@
 {
   "Voucher Details": [
     {
-      "card": "SBI SimplyCLICK",
-      "details": [
-        "₹2,000 voucher at ₹1 lakh annual spend",
-        "₹2,000 voucher at ₹2 lakh annual spend",
-        "Fee waiver at ₹1 lakh annual spend",
-        "Voucher portal: SBI GyFTR"
-      ]
-    },
-    {
-      "card": "ICICI Coral",
-      "details": [
-        "₹2,000 voucher at ₹2 lakh spend",
-        "Additional ₹1,000 voucher for every further ₹1 lakh spend after ₹2 lakh"
-      ]
+      "card": "BoB Uni Goldx",
+      "reward": "Voucher offers",
+      "cap": "Varies",
+      "conditions": "Through the Uni app"
     },
     {
       "card": "HDFC MoneyBack+",
-      "details": [
-        "₹500 voucher on ₹50,000 spend per quarter",
-        "Voucher offers through HDFC SmartBuy; value/conditions vary"
-      ]
+      "reward": "Voucher offers",
+      "cap": "Varies",
+      "conditions": "Through HDFC SmartBuy"
     },
     {
-      "card": "SBI Tata Neu Plus",
-      "details": [
-        "Fee waiver at ₹1 lakh spend"
-      ]
+      "card": "Kotak Debit",
+      "reward": "Voucher offers",
+      "cap": "Varies",
+      "conditions": "Through Maximize and Kotak GyFTR"
     },
     {
-      "card": "BoB Uni Goldx",
-      "details": [
-        "Voucher offers through the Uni app; value/conditions vary"
-      ]
-    },
-    {
-      "card": "Kotak 811 Debit Card",
-      "details": [
-        "Voucher offers through Maximize and Kotak GyFTR; value/conditions vary"
-      ]
+      "card": "SBI SimplyCLICK",
+      "reward": "Voucher offers",
+      "cap": "Varies",
+      "conditions": "Through SBI GyFTR portal"
     }
   ],
   "Debit Cards": [
     {
       "card": "IDFC Debit Card",
-      "details": [
-        "ATM withdrawal limit: ₹1 lakh per day",
-        "Online transaction limit: ₹4 lakh per day",
-        "Unlimited ATM withdrawals at any bank",
-        "Personal accident insurance: ₹5 lakh",
-        "Air accident insurance: ₹30 lakh",
-        "Lost card cover: ₹4 lakh"
-      ]
+      "benefits": {
+        "Annual Fee": "NA",
+        "Fee Waiver": "NA",
+        "Reward Structure": "NA",
+        "Domestic Airport Lounge": "NA",
+        "International Airport Lounge": "NA",
+        "Railway Lounge": "NA",
+        "Milestone / Voucher Benefits": "NA",
+        "Shopping & Lifestyle Offers": "NA",
+        "Travel Benefits": "NA",
+        "Insurance": "Personal accident ₹5 lakh; air accident ₹30 lakh; lost card cover ₹4 lakh",
+        "Transaction Limits": "ATM withdrawal ₹1 lakh/day; online transactions ₹4 lakh/day; unlimited ATM withdrawals at any bank",
+        "Other Benefits": "NA"
+      }
     },
     {
       "card": "Kotak 811 Debit Card",
-      "details": [
-        "ATM withdrawal limit: ₹1 lakh per day",
-        "Online transaction limit: ₹3 lakh per day",
-        "Insurance cover: up to ₹80 lakh"
-      ]
+      "benefits": {
+        "Annual Fee": "NA",
+        "Fee Waiver": "NA",
+        "Reward Structure": "NA",
+        "Domestic Airport Lounge": "NA",
+        "International Airport Lounge": "NA",
+        "Railway Lounge": "NA",
+        "Milestone / Voucher Benefits": "NA",
+        "Shopping & Lifestyle Offers": "NA",
+        "Travel Benefits": "NA",
+        "Insurance": "Cover up to ₹80 lakh",
+        "Transaction Limits": "ATM withdrawal ₹1 lakh/day; online transactions ₹3 lakh/day",
+        "Other Benefits": "NA"
+      }
     }
   ],
   "Credit Cards": [
     {
       "card": "SBI SimplyCLICK",
-      "details": [
-        "Annual spend vouchers: ₹2,000 at ₹1 lakh and ₹2 lakh milestones",
-        "Annual fee waiver at ₹1 lakh spend"
-      ]
+      "benefits": {
+        "Annual Fee": "NA",
+        "Fee Waiver": "₹1 lakh annual spend",
+        "Reward Structure": "NA",
+        "Domestic Airport Lounge": "NA",
+        "International Airport Lounge": "NA",
+        "Railway Lounge": "NA",
+        "Milestone / Voucher Benefits": "₹2,000 voucher at ₹1 lakh and ₹2 lakh annual spend milestones",
+        "Shopping & Lifestyle Offers": "NA",
+        "Travel Benefits": "NA",
+        "Insurance": "NA",
+        "Transaction Limits": "NA",
+        "Other Benefits": "NA"
+      }
     },
     {
       "card": "IDFC Millennia",
-      "details": [
-        "Reward point value: ₹0.25 per point",
-        "Railway lounge: 4 visits per quarter",
-        "Railway lounge eligibility: ₹20,000 spend per month"
-      ]
+      "benefits": {
+        "Annual Fee": "NA",
+        "Fee Waiver": "NA",
+        "Reward Structure": "₹0.25 per reward point",
+        "Domestic Airport Lounge": "NA",
+        "International Airport Lounge": "NA",
+        "Railway Lounge": "4 visits per quarter; ₹20,000 spend per month",
+        "Milestone / Voucher Benefits": "NA",
+        "Shopping & Lifestyle Offers": "NA",
+        "Travel Benefits": "NA",
+        "Insurance": "NA",
+        "Transaction Limits": "NA",
+        "Other Benefits": "NA"
+      }
     },
     {
       "card": "SBI Tata Neu Plus",
-      "details": [
-        "Domestic airport lounge: 1 visit per quarter with ₹50,000 spend in the previous quarter",
-        "Fee waiver at ₹1 lakh spend"
-      ]
+      "benefits": {
+        "Annual Fee": "NA",
+        "Fee Waiver": "₹1 lakh spend",
+        "Reward Structure": "NA",
+        "Domestic Airport Lounge": "1 visit per quarter; ₹50,000 spend in previous quarter",
+        "International Airport Lounge": "NA",
+        "Railway Lounge": "NA",
+        "Milestone / Voucher Benefits": "NA",
+        "Shopping & Lifestyle Offers": "NA",
+        "Travel Benefits": "NA",
+        "Insurance": "NA",
+        "Transaction Limits": "NA",
+        "Other Benefits": "NA"
+      }
     },
     {
       "card": "Axis Neo",
-      "details": [
-        "Zomato: ₹120 off on minimum order ₹499, twice per month",
-        "BookMyShow: 10% off up to ₹100",
-        "Paytm utility: 5% on utility payments, excluding electricity and water",
-        "Blinkit: 10% off up to ₹250 on minimum order ₹750, once per month",
-        "Reward rate: 1 point per ₹200",
-        "Reward point value: ₹0.20 per point"
-      ]
+      "benefits": {
+        "Annual Fee": "NA",
+        "Fee Waiver": "NA",
+        "Reward Structure": "1 point per ₹200; ₹0.20 per point",
+        "Domestic Airport Lounge": "NA",
+        "International Airport Lounge": "NA",
+        "Railway Lounge": "NA",
+        "Milestone / Voucher Benefits": "NA",
+        "Shopping & Lifestyle Offers": "Zomato ₹120 off on ₹499 minimum, twice/month; BookMyShow 10% off up to ₹100; Blinkit 10% off up to ₹250 on ₹750 minimum, once/month",
+        "Travel Benefits": "NA",
+        "Insurance": "NA",
+        "Transaction Limits": "NA",
+        "Other Benefits": "Paytm utility 5%, excluding electricity and water"
+      }
     },
     {
       "card": "Yes FinBooster",
-      "details": [
-        "Online spends: 10 reward points per ₹200",
-        "Online grocery and apparel: 6 reward points per ₹200",
-        "Other spends: 2 reward points (spend basis not specified)",
-        "Reward point value: ₹0.25 per point",
-        "Accidental death cover: up to ₹2.5 lakh"
-      ]
+      "benefits": {
+        "Annual Fee": "NA",
+        "Fee Waiver": "NA",
+        "Reward Structure": "Online: 10 points/₹200; online grocery & apparel: 6 points/₹200; other spends: 2 points (spend basis not specified); ₹0.25 per point",
+        "Domestic Airport Lounge": "NA",
+        "International Airport Lounge": "NA",
+        "Railway Lounge": "NA",
+        "Milestone / Voucher Benefits": "NA",
+        "Shopping & Lifestyle Offers": "NA",
+        "Travel Benefits": "NA",
+        "Insurance": "Accidental death cover up to ₹2.5 lakh",
+        "Transaction Limits": "NA",
+        "Other Benefits": "NA"
+      }
     },
     {
       "card": "IDFC Power+",
-      "details": [
-        "Accident cover: ₹2 lakh",
-        "Complimentary roadside assistance worth ₹1,399",
-        "Domestic airport lounge: 1 visit per quarter with minimum ₹20,000 spend in the previous month",
-        "District movie offer: 25% off up to ₹100; minimum 1 spend per month; code: IDFCCCFM",
-        "Fuel: 6.5%",
-        "FASTag: 5%",
-        "Utility and grocery: 5%",
-        "UPI: 3 reward points; point value ₹0.25"
-      ]
+      "benefits": {
+        "Annual Fee": "NA",
+        "Fee Waiver": "NA",
+        "Reward Structure": "Fuel 6.5%; FASTag 5%; utility & grocery 5%; UPI 3 points; ₹0.25 per UPI point",
+        "Domestic Airport Lounge": "1 visit per quarter; minimum ₹20,000 spend in previous month",
+        "International Airport Lounge": "NA",
+        "Railway Lounge": "NA",
+        "Milestone / Voucher Benefits": "NA",
+        "Shopping & Lifestyle Offers": "District movie: 25% off up to ₹100; at least 1 spend/month; code IDFCCCFM",
+        "Travel Benefits": "NA",
+        "Insurance": "Accident cover ₹2 lakh",
+        "Transaction Limits": "NA",
+        "Other Benefits": "Complimentary roadside assistance worth ₹1,399"
+      }
     },
     {
       "card": "ICICI Coral",
-      "details": [
-        "Railway lounge access",
-        "Domestic airport lounge: requires ₹75,000 spend in the previous quarter",
-        "BookMyShow: 25% off up to ₹100; 2 tickets, twice; requires ₹25,000 spend in the previous month",
-        "Reward rate: 2 points per ₹100",
-        "Fuel, utility and insurance: 1 point per ₹100",
-        "Personal accident cover: ₹2 lakh",
-        "Concierge service: 18002678729"
-      ]
+      "benefits": {
+        "Annual Fee": "NA",
+        "Fee Waiver": "NA",
+        "Reward Structure": "2 points/₹100; fuel, utility and insurance: 1 point/₹100",
+        "Domestic Airport Lounge": "Eligibility requires ₹75,000 spend in previous quarter",
+        "International Airport Lounge": "NA",
+        "Railway Lounge": "Access available; visit count/conditions not specified",
+        "Milestone / Voucher Benefits": "₹2,000 voucher at ₹2 lakh spend; additional ₹1,000 for every further ₹1 lakh after ₹2 lakh",
+        "Shopping & Lifestyle Offers": "BookMyShow 25% off up to ₹100; 2 tickets, twice; requires ₹25,000 spend in previous month",
+        "Travel Benefits": "NA",
+        "Insurance": "Personal accident cover ₹2 lakh",
+        "Transaction Limits": "NA",
+        "Other Benefits": "Concierge: 18002678729"
+      }
     },
     {
       "card": "HDFC MoneyBack+",
-      "details": [
-        "2.5% on Amazon, Swiggy, Flipkart and Reliance Smart",
-        "2 reward points per ₹200",
-        "Reward point value: ₹0.25 per point",
-        "10% discount on Swiggy Dineout once per month"
-      ]
+      "benefits": {
+        "Annual Fee": "NA",
+        "Fee Waiver": "NA",
+        "Reward Structure": "2.5% on Amazon, Swiggy, Flipkart and Reliance Smart; 2 points/₹200; ₹0.25 per point",
+        "Domestic Airport Lounge": "NA",
+        "International Airport Lounge": "NA",
+        "Railway Lounge": "NA",
+        "Milestone / Voucher Benefits": "₹500 voucher on ₹50,000 spend per quarter",
+        "Shopping & Lifestyle Offers": "10% discount on Swiggy Dineout once per month",
+        "Travel Benefits": "NA",
+        "Insurance": "NA",
+        "Transaction Limits": "NA",
+        "Other Benefits": "NA"
+      }
     },
     {
       "card": "AU ixigo",
-      "details": [
-        "Flights: 10% off up to ₹1,000, once per month",
-        "Bus: 10% off up to ₹300, once per month",
-        "Hotels: 10% off up to ₹1,000, once per month",
-        "Train bookings: no payment gateway fee",
-        "Online: 10 reward points per ₹200; maximum 10,000 points per month",
-        "Offline: 5 reward points per ₹200; maximum 10,000 points per month",
-        "Reward point value: ₹0.50 per point",
-        "International lounge: 1 complimentary visit per year; Priority Pass usable only outside India",
-        "Domestic airport lounge: 2 visits per quarter with ₹50,000 spend in the previous quarter",
-        "Railway lounge: 2 visits per quarter; 16 per year; no spend requirement"
-      ]
+      "benefits": {
+        "Annual Fee": "NA",
+        "Fee Waiver": "NA",
+        "Reward Structure": "Online: 10 points/₹200, max 10,000/month; offline: 5 points/₹200, max 10,000/month; ₹0.50 per point",
+        "Domestic Airport Lounge": "2 visits per quarter with ₹50,000 spend in previous quarter",
+        "International Airport Lounge": "1 complimentary visit per year; Priority Pass only outside India",
+        "Railway Lounge": "2 visits per quarter; 16/year; no spend requirement",
+        "Milestone / Voucher Benefits": "NA",
+        "Shopping & Lifestyle Offers": "NA",
+        "Travel Benefits": "Flights 10% off up to ₹1,000/month; bus 10% off up to ₹300/month; hotels 10% off up to ₹1,000/month; no payment gateway fee on train bookings",
+        "Insurance": "NA",
+        "Transaction Limits": "NA",
+        "Other Benefits": "NA"
+      }
     }
+  ],
+  "Benefit Categories": [
+    "Annual Fee",
+    "Fee Waiver",
+    "Reward Structure",
+    "Domestic Airport Lounge",
+    "International Airport Lounge",
+    "Railway Lounge",
+    "Milestone / Voucher Benefits",
+    "Shopping & Lifestyle Offers",
+    "Travel Benefits",
+    "Insurance",
+    "Transaction Limits",
+    "Other Benefits"
   ]
 }
