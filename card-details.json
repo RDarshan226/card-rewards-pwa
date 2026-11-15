@@ -1,0 +1,160 @@
+{
+  "Voucher Details": [
+    {
+      "card": "SBI SimplyCLICK",
+      "details": [
+        "₹2,000 voucher at ₹1 lakh annual spend",
+        "₹2,000 voucher at ₹2 lakh annual spend",
+        "Fee waiver at ₹1 lakh annual spend",
+        "Voucher portal: SBI GyFTR"
+      ]
+    },
+    {
+      "card": "ICICI Coral",
+      "details": [
+        "₹2,000 voucher at ₹2 lakh spend",
+        "Additional ₹1,000 voucher for every further ₹1 lakh spend after ₹2 lakh"
+      ]
+    },
+    {
+      "card": "HDFC MoneyBack+",
+      "details": [
+        "₹500 voucher on ₹50,000 spend per quarter",
+        "Voucher offers through HDFC SmartBuy; value/conditions vary"
+      ]
+    },
+    {
+      "card": "SBI Tata Neu Plus",
+      "details": [
+        "Fee waiver at ₹1 lakh spend"
+      ]
+    },
+    {
+      "card": "BoB Uni Goldx",
+      "details": [
+        "Voucher offers through the Uni app; value/conditions vary"
+      ]
+    },
+    {
+      "card": "Kotak 811 Debit Card",
+      "details": [
+        "Voucher offers through Maximize and Kotak GyFTR; value/conditions vary"
+      ]
+    }
+  ],
+  "Debit Cards": [
+    {
+      "card": "IDFC Debit Card",
+      "details": [
+        "ATM withdrawal limit: ₹1 lakh per day",
+        "Online transaction limit: ₹4 lakh per day",
+        "Unlimited ATM withdrawals at any bank",
+        "Personal accident insurance: ₹5 lakh",
+        "Air accident insurance: ₹30 lakh",
+        "Lost card cover: ₹4 lakh"
+      ]
+    },
+    {
+      "card": "Kotak 811 Debit Card",
+      "details": [
+        "ATM withdrawal limit: ₹1 lakh per day",
+        "Online transaction limit: ₹3 lakh per day",
+        "Insurance cover: up to ₹80 lakh"
+      ]
+    }
+  ],
+  "Credit Cards": [
+    {
+      "card": "SBI SimplyCLICK",
+      "details": [
+        "Annual spend vouchers: ₹2,000 at ₹1 lakh and ₹2 lakh milestones",
+        "Annual fee waiver at ₹1 lakh spend"
+      ]
+    },
+    {
+      "card": "IDFC Millennia",
+      "details": [
+        "Reward point value: ₹0.25 per point",
+        "Railway lounge: 4 visits per quarter",
+        "Railway lounge eligibility: ₹20,000 spend per month"
+      ]
+    },
+    {
+      "card": "SBI Tata Neu Plus",
+      "details": [
+        "Domestic airport lounge: 1 visit per quarter with ₹50,000 spend in the previous quarter",
+        "Fee waiver at ₹1 lakh spend"
+      ]
+    },
+    {
+      "card": "Axis Neo",
+      "details": [
+        "Zomato: ₹120 off on minimum order ₹499, twice per month",
+        "BookMyShow: 10% off up to ₹100",
+        "Paytm utility: 5% on utility payments, excluding electricity and water",
+        "Blinkit: 10% off up to ₹250 on minimum order ₹750, once per month",
+        "Reward rate: 1 point per ₹200",
+        "Reward point value: ₹0.20 per point"
+      ]
+    },
+    {
+      "card": "Yes FinBooster",
+      "details": [
+        "Online spends: 10 reward points per ₹200",
+        "Online grocery and apparel: 6 reward points per ₹200",
+        "Other spends: 2 reward points (spend basis not specified)",
+        "Reward point value: ₹0.25 per point",
+        "Accidental death cover: up to ₹2.5 lakh"
+      ]
+    },
+    {
+      "card": "IDFC Power+",
+      "details": [
+        "Accident cover: ₹2 lakh",
+        "Complimentary roadside assistance worth ₹1,399",
+        "Domestic airport lounge: 1 visit per quarter with minimum ₹20,000 spend in the previous month",
+        "District movie offer: 25% off up to ₹100; minimum 1 spend per month; code: IDFCCCFM",
+        "Fuel: 6.5%",
+        "FASTag: 5%",
+        "Utility and grocery: 5%",
+        "UPI: 3 reward points; point value ₹0.25"
+      ]
+    },
+    {
+      "card": "ICICI Coral",
+      "details": [
+        "Railway lounge access",
+        "Domestic airport lounge: requires ₹75,000 spend in the previous quarter",
+        "BookMyShow: 25% off up to ₹100; 2 tickets, twice; requires ₹25,000 spend in the previous month",
+        "Reward rate: 2 points per ₹100",
+        "Fuel, utility and insurance: 1 point per ₹100",
+        "Personal accident cover: ₹2 lakh",
+        "Concierge service: 18002678729"
+      ]
+    },
+    {
+      "card": "HDFC MoneyBack+",
+      "details": [
+        "2.5% on Amazon, Swiggy, Flipkart and Reliance Smart",
+        "2 reward points per ₹200",
+        "Reward point value: ₹0.25 per point",
+        "10% discount on Swiggy Dineout once per month"
+      ]
+    },
+    {
+      "card": "AU ixigo",
+      "details": [
+        "Flights: 10% off up to ₹1,000, once per month",
+        "Bus: 10% off up to ₹300, once per month",
+        "Hotels: 10% off up to ₹1,000, once per month",
+        "Train bookings: no payment gateway fee",
+        "Online: 10 reward points per ₹200; maximum 10,000 points per month",
+        "Offline: 5 reward points per ₹200; maximum 10,000 points per month",
+        "Reward point value: ₹0.50 per point",
+        "International lounge: 1 complimentary visit per year; Priority Pass usable only outside India",
+        "Domestic airport lounge: 2 visits per quarter with ₹50,000 spend in the previous quarter",
+        "Railway lounge: 2 visits per quarter; 16 per year; no spend requirement"
+      ]
+    }
+  ]
+}
