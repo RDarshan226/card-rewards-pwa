@@ -134,7 +134,8 @@ body.modal-open{overflow:hidden}
 </div>
 
 <script>
-let data = {};\nlet cardDetails = {};
+let data = {};
+let cardDetails = {};
 const splashStarted=Date.now();
 function switchTab(id,button){
  document.querySelectorAll(".tab-panel").forEach(p=>p.classList.remove("active"));
@@ -180,6 +181,9 @@ async function loadRewardsData() {
     const [response, cardResponse] = await Promise.all([fetch("./rewards-data.json", {cache: "no-store"}),fetch("./card-details.json",{cache:"no-store"})]);
     if (!response.ok) throw new Error("Unable to load rewards data");
     data = await response.json();
+    if(!cardResponse.ok) throw new Error("Unable to load card details");
+    cardDetails = await cardResponse.json();
+    populateBenefitFilters();
     render();
     hideSplash();
   } catch (error) {
