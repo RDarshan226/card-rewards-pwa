@@ -1,4 +1,4 @@
-const CACHE_NAME="card-rewards-v10";
+const CACHE_NAME="card-rewards-v11";
 const CORE=["./","./index.html","./manifest.json","./icon-192.png","./icon-512.png","./card-details.json","./rewards-data.json"];
 self.addEventListener("install",e=>{e.waitUntil(caches.open(CACHE_NAME).then(c=>c.addAll(CORE)));self.skipWaiting();});
 self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE_NAME).map(k=>caches.delete(k)))));self.clients.claim();});
