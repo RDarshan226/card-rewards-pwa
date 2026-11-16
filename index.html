@@ -55,6 +55,18 @@ input:focus{border-color:var(--cyan);box-shadow:0 0 20px #00f5ff55}
 .row{margin:8px 0;color:#c5cee5;font-size:.92rem}.label{color:var(--cyan);font-weight:700}
 .empty{padding:30px;text-align:center;color:var(--muted)}
 .footer{text-align:center;color:#6f7b9e;padding:25px}
+.tab-nav{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:0 0 22px}
+.tab-btn{border:1px solid #34406f;background:#10152d;color:#b9c7e8;border-radius:12px;padding:12px 22px;font-weight:800;cursor:pointer}
+.tab-btn.active{color:var(--cyan);border-color:var(--cyan);background:#10233a;box-shadow:0 0 18px #00f5ff33}
+.tab-panel{display:none}.tab-panel.active{display:block}
+.card-filters{display:grid;grid-template-columns:minmax(0,2fr) minmax(180px,1fr);gap:12px;margin:12px 0 22px}
+.card-filters select{width:100%;padding:15px 16px;border-radius:14px;border:1px solid #2d3766;background:#0d1023;color:white;font-size:1rem;outline:none}
+.benefit-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:15px}
+.benefit-card{background:linear-gradient(145deg,#171c3c,#0d1025);border:1px solid #303a69;border-radius:16px;padding:18px}
+.benefit-card h3{color:#fff;margin:0 0 14px}
+.benefit-row{padding:9px 0;border-top:1px solid #293253;color:#c5cee5;font-size:.9rem;line-height:1.45}
+.benefit-row strong{display:block;color:var(--cyan);margin-bottom:3px}
+@media(max-width:600px){.card-filters{grid-template-columns:1fr}}
 
 .modal{
  display:none; position:fixed; inset:0; z-index:100;
@@ -89,25 +101,83 @@ body.modal-open{overflow:hidden}
 </header>
 
 <div class="container">
- <div class="search-wrap"><input id="search" placeholder="🔍 Search categories or cards..." oninput="filterCategories()"></div>
- <div class="grid" id="grid"></div>
- <div class="modal" id="modal" onclick="handleBackdrop(event)">
+ <nav class="tab-nav" aria-label="Card sections">
+  <button class="tab-btn active" data-tab="voucherPanel" onclick="switchTab('voucherPanel',this)">🎁 Vouchers</button>
+  <button class="tab-btn" data-tab="debitPanel" onclick="switchTab('debitPanel',this)">💳 Debit Cards</button>
+  <button class="tab-btn" data-tab="creditPanel" onclick="switchTab('creditPanel',this)">💎 Credit Cards</button>
+ </nav>
+ <section class="tab-panel active" id="voucherPanel">
+  <div class="search-wrap"><input id="search" placeholder="🔍 Search categories or cards..." oninput="filterCategories()"></div>
+  <div class="grid" id="grid"></div>
+  <div class="modal" id="modal" onclick="handleBackdrop(event)">
    <section class="modal-content">
-     <div class="details-head"><h2 id="detailTitle"></h2><button class="close" onclick="closeDetails()">✕ Close</button></div>
-     <div class="cards" id="cards"></div>
+    <div class="details-head"><h2 id="detailTitle"></h2><button class="close" onclick="closeDetails()">✕ Close</button></div>
+    <div class="cards" id="cards"></div>
    </section>
- </div>
+  </div>
+  <div class="footer">Interactive personal card rewards dashboard • Tap any category to explore</div>
+ </section>
+ <section class="tab-panel" id="debitPanel">
+  <div class="card-filters">
+   <input id="debitSearch" placeholder="🔍 Search debit cards or benefits..." oninput="renderCardTab('Debit Cards')">
+   <select id="debitCategory" aria-label="Filter debit benefits" onchange="renderCardTab('Debit Cards')"><option value="">All benefit categories</option></select>
+  </div>
+  <div class="benefit-list" id="debitCards"></div>
+ </section>
+ <section class="tab-panel" id="creditPanel">
+  <div class="card-filters">
+   <input id="creditSearch" placeholder="🔍 Search credit cards or benefits..." oninput="renderCardTab('Credit Cards')">
+   <select id="creditCategory" aria-label="Filter credit benefits" onchange="renderCardTab('Credit Cards')"><option value="">All benefit categories</option></select>
+  </div>
+  <div class="benefit-list" id="creditCards"></div>
+ </section>
 </div>
-<div class="footer">Interactive personal card rewards dashboard • Tap any category to explore</div>
 
 <script>
-let data = {};
+let data = {};\nlet cardDetails = {};
 const splashStarted=Date.now();
+function switchTab(id,button){
+ document.querySelectorAll(".tab-panel").forEach(p=>p.classList.remove("active"));
+ document.querySelectorAll(".tab-btn").forEach(b=>b.classList.remove("active"));
+ document.getElementById(id).classList.add("active");button.classList.add("active");
+ if(id==="debitPanel")renderCardTab("Debit Cards");
+ if(id==="creditPanel")renderCardTab("Credit Cards");
+}
+function renderCardTab(type){
+ const key=type==="Debit Cards"?"debit":"credit";
+ const listId=key+"Cards",searchId=key+"Search",categoryId=key+"Category";
+ const target=document.getElementById(listId),term=document.getElementById(searchId).value.toLowerCase();
+ const category=document.getElementById(categoryId).value;
+ const cards=cardDetails[type]||[];
+ target.innerHTML="";
+ const filtered=cards.filter(card=>{
+  const benefits=card.benefits||{};
+  return (!term||(card.card+" "+Object.entries(benefits).map(([k,v])=>k+" "+v).join(" ")).toLowerCase().includes(term))
+   &&(!category||benefits[category]!==undefined);
+ });
+ filtered.forEach(card=>{
+  const article=document.createElement("article");article.className="benefit-card";
+  const rows=Object.entries(card.benefits||{}).filter(([name])=>!category||name===category)
+   .map(([name,value])=>'<div class="benefit-row"><strong>'+escapeHTML(name)+'</strong>'+escapeHTML(value||"NA")+'</div>').join("");
+  article.innerHTML="<h3>"+escapeHTML(card.card)+"</h3>"+rows;target.appendChild(article);
+ });
+ if(!filtered.length)target.innerHTML='<div class="empty">No matching cards or benefits found.</div>';
+}
+function escapeHTML(value){
+ return String(value).replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
+}
+function populateBenefitFilters(){
+ const categories=cardDetails["Benefit Categories"]||[];
+ ["debitCategory","creditCategory"].forEach(id=>{
+  const select=document.getElementById(id);
+  categories.forEach(name=>{const option=document.createElement("option");option.value=name;option.textContent=name;select.appendChild(option);});
+ });
+}
 function hideSplash(){const wait=Math.max(0,1000-(Date.now()-splashStarted));setTimeout(()=>document.getElementById("splashScreen")?.classList.add("hide"),wait)}
 setTimeout(()=>document.getElementById("splashScreen")?.classList.add("hide"),7000);
 async function loadRewardsData() {
   try {
-    const response = await fetch("./rewards-data.json", {cache: "no-store"});
+    const [response, cardResponse] = await Promise.all([fetch("./rewards-data.json", {cache: "no-store"}),fetch("./card-details.json",{cache:"no-store"})]);
     if (!response.ok) throw new Error("Unable to load rewards data");
     data = await response.json();
     render();
